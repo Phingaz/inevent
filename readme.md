@@ -71,8 +71,9 @@ Para executar o projeto WeatherDo, siga as instruções abaixo:
      ```
 
    - **Configuração do arquivo `.env`**:
-     
+
      Crie um arquivo `.env` no diretório `weatherdo-backend` e adicione sua chave de API da OpenWeather:
+
      ```bash
      OPEN_WEATHER_API_KEY=SuaChaveAPI
      ```
