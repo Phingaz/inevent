@@ -1,125 +1,117 @@
 # WeatherDo
 
-**WeatherDo** é um aplicativo de clima moderno que permite aos usuários pesquisar as condições climáticas atuais e a previsão de 5 dias usando a API OpenWeather. Com base na previsão do tempo, os usuários também podem criar uma lista de tarefas com tags específicas de clima e prioridades.
+**WeatherDo** é um aplicativo moderno de clima que permite aos usuários consultar as condições climáticas atuais e a previsão de 5 dias usando a API OpenWeather. Com base nas previsões do tempo, os usuários também podem criar uma lista de tarefas com tags específicas de clima e prioridades.
 
 ## Índice
 
 - [Visão Geral](#visão-geral)
 - [Recursos](#recursos)
-- [Configuração do Frontend](#configuração-do-frontend)
-- [Configuração do Backend](#configuração-do-backend)
-- [Configuração Docker](#configuração-docker)
-- [Scripts](#scripts)
+- [Como Executar o Projeto](#como-executar-o-projeto)
+- [Com Docker](#com-docker)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
 ## Visão Geral
 
-O WeatherDo consiste em dois componentes principais:
+WeatherDo consiste em dois componentes principais:
 
 - **Frontend**: Desenvolvido com React, Vite e estilizado com TailwindCSS.
-- **Backend**: Construído com Node.js e Express.js para lidar com as requisições da API e fornecer dados meteorológicos.
+- **Backend**: Construído com Node.js e Express.js para lidar com requisições de API e fornecer dados meteorológicos.
 
 ## Recursos
 
 - Pesquisar dados meteorológicos usando a API OpenWeather.
 - Ver condições meteorológicas atuais e a previsão para 5 dias.
-- Criar e gerenciar itens de tarefas com base nas condições climáticas, com tags de prioridade.
+- Criar e gerenciar tarefas com base nas condições climáticas, com tags e prioridades.
 
-## Configuração do Frontend
+### Como Executar o Projeto
 
-1. **Instalar dependências**:
+Para executar o projeto WeatherDo, siga as instruções abaixo:
 
-   ```bash
-   cd weatherdo-frontend
-   npm install
-   ```
+1. **Clone o repositório**:
 
-2. **Scripts disponíveis**:
+   - Clone o repositório do GitHub:
 
-   - **Desenvolvimento**: Inicia o servidor de desenvolvimento.
+     ```bash
+     git clone https://github.com/Phingaz/inevent.git
+     ```
+
+2. **Configuração do Frontend**:
+
+   - Navegue para o diretório `weatherdo-frontend`:
+
+     ```bash
+     cd weatherdo-frontend
+     ```
+
+   - Instale as dependências:
+
+     ```bash
+     npm install
+     ```
+
+   - Execute o servidor de desenvolvimento:
 
      ```bash
      npm run dev
      ```
 
-   - **Build**: Constrói o projeto para produção.
+3. **Configuração do Backend**:
+
+   - Navegue para o diretório `weatherdo-backend`:
 
      ```bash
-     npm run build
+     cd weatherdo-backend
      ```
 
-   - **Lint**: Executa o ESLint para verificar problemas no código.
+   - Instale as dependências:
 
      ```bash
-     npm run lint
+     npm install
      ```
 
-   - **Preview**: Previsualiza o build de produção localmente.
-
-     ```bash
-     npm run preview
-     ```
-
-## Configuração do Backend
-
-1. **Instalar dependências**:
-
-   ```bash
-   cd weatherdo-backend
-   npm install
-   ```
-
-2. **Scripts disponíveis**:
-
-   - **Desenvolvimento**: Inicia o servidor backend com recarregamento automático.
+   - Execute o servidor backend:
 
      ```bash
      npm run dev
      ```
 
-   - **Produção**: Inicia o servidor backend para produção.
+4. **Acessar a Aplicação**:
+   - O frontend estará disponível em `http://localhost:3000`.
+   - O backend estará disponível em `http://localhost:3001`.
 
-     ```bash
-     npm start
-     ```
+## Com Docker
 
-3. O servidor backend será executado na porta **3001** por padrão.
+WeatherDo pode ser executado usando Docker para facilitar o deploy. O aplicativo tem dois serviços principais: `frontend` e `backend`.
 
-## Configuração Docker
+### Como Construir e Executar os Containers Docker
 
-O WeatherDo pode ser executado usando Docker para uma implantação containerizada simples. O aplicativo é composto por dois serviços: `frontend` e `backend`.
+1. Para construir e executar os serviços, use:
 
-### Como construir e executar os containers Docker
+   ```bash
+   docker-compose up --build
+   ```
 
-- Para construir e executar os serviços, use:
-
-  ```bash
-  docker-compose up --build
-  ```
-
-- Acesse o frontend em `http://localhost:3000` e o backend em `http://localhost:3001`.
-
-## Scripts
+2. Acesse o frontend em `http://localhost:3000` e o backend em `http://localhost:3001`.
 
 ### Scripts do Frontend
 
 - **`dev`**: Executa o frontend em modo de desenvolvimento usando Vite.
 - **`build`**: Compila o TypeScript e constrói a versão de produção.
-- **`lint`**: Executa o lint do projeto com ESLint.
-- **`preview`**: Executa uma visualização local do build de produção.
+- **`lint`**: Executa o ESLint para verificar problemas no código.
+- **`preview`**: Previsualiza o build de produção localmente.
 
 ### Scripts do Backend
 
 - **`dev`**: Executa o servidor backend usando Nodemon para desenvolvimento.
 - **`start`**: Inicia o servidor backend para produção.
 
-## Tecnologias Utilizadas
+### Tecnologias Utilizadas
 
 - **Frontend**: React, Vite, TailwindCSS
 - **Backend**: Node.js, Express.js
 - **API**: OpenWeather API
-- **Docker**: Serviços containerizados usando Docker
+- **Docker**: Containerização com Docker
 
 ---
 
-Com o WeatherDo, você pode acompanhar o clima e gerenciar suas tarefas diárias com base na previsão. Aproveite!
+Com WeatherDo, você pode acompanhar a previsão do tempo e gerenciar suas tarefas diárias com base nas condições meteorológicas. Aproveite!
