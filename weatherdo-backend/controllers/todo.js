@@ -36,9 +36,11 @@ export const addTodo = (req, res) => {
 export const updateTodo = (req, res) => {
   try {
     const { id } = req.params;
-    const { text, weatherTag, completed } = req.body;
+    const { text, weatherTag, completed, priority } = req.body;
+    console.log(req.body);
 
     const todoIndex = todos.findIndex((todo) => todo.id === parseInt(id));
+    console.log(todoIndex);
 
     if (todoIndex === -1) {
       return errorHandler(req, res, "Todo not found", 404);
@@ -51,6 +53,7 @@ export const updateTodo = (req, res) => {
         weatherTag !== undefined ? weatherTag : todos[todoIndex].weatherTag,
       completed:
         completed !== undefined ? completed : todos[todoIndex].completed,
+      priority: priority !== undefined ? priority : todos[todoIndex].priority,
     };
 
     todos[todoIndex] = updatedTodo;
