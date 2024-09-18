@@ -7,6 +7,7 @@
 - [Visão Geral](#visão-geral)
 - [Recursos](#recursos)
 - [Como Executar o Projeto](#como-executar-o-projeto)
+- [Configuração do .env](#configuração-do-env)
 - [Com Docker](#com-docker)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 
@@ -69,6 +70,13 @@ Para executar o projeto WeatherDo, siga as instruções abaixo:
      npm install
      ```
 
+   - **Configuração do arquivo `.env`**:
+     
+     Crie um arquivo `.env` no diretório `weatherdo-backend` e adicione sua chave de API da OpenWeather:
+     ```bash
+     OPEN_WEATHER_API_KEY=SuaChaveAPI
+     ```
+
    - Execute o servidor backend:
 
      ```bash
@@ -78,6 +86,16 @@ Para executar o projeto WeatherDo, siga as instruções abaixo:
 4. **Acessar a Aplicação**:
    - O frontend estará disponível em `http://localhost:3000`.
    - O backend estará disponível em `http://localhost:3001`.
+
+## Configuração do .env
+
+Para que a aplicação possa se comunicar com a API OpenWeather, é necessário criar um arquivo `.env` no diretório `weatherdo-backend` com a seguinte variável:
+
+```bash
+OPEN_WEATHER_API_KEY=SUA_CHAVE_DA_API
+```
+
+Substitua `SUA_CHAVE_DA_API` pela chave da sua conta na [OpenWeather API](https://openweathermap.org/).
 
 ## Com Docker
 
