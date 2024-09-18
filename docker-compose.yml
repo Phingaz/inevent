@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: "weatherdo-backend"
+    image: weatherdo-backend
+    build:
+      context: ./weatherdo-backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./weatherdo-backend/.env
+    ports:
+      - "3001:3001"
+
+  frontend:
+    container_name: "weatherdo-frontend"
+    image: weatherdo-frontend
+    build:
+      context: ./weatherdo-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
